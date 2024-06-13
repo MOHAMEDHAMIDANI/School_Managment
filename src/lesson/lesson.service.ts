@@ -24,4 +24,7 @@ export class LessonService {
     getLesson(id: string) {
         return this.lessonRepository.findOne({ where: { id: id } });
     }
+    getLessons() {
+        return this.lessonRepository.find();
+    }
 }
